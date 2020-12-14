@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/config/:/etc/nginx/conf.d/
+      - ./nginx/config/site.conf:/etc/nginx/conf.d/site.conf
       - ./nginx/log/:/var/log/nginx/
   php:
     image: php:fpm
@@ -14,6 +14,6 @@ services:
       - "9000:9000"
     volumes:
       - ./php/html/:/var/www/html/
-      - ./php/config/site.conf:/usr/local/etc/php/conf.d/site.conf
+      - ./php/config/php.config.ini:/usr/local/etc/php/conf.d/php.config.ini
       - ./php/config/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./php/log/:/var/log/
