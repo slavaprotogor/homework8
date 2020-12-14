@@ -14,6 +14,6 @@ services:
       - "9000:9000"
     volumes:
       - ./php/html/:/var/www/html/
-      - ./php/config/:/usr/local/etc/php/conf.d
+      - ./php/config/site.conf:/usr/local/etc/php/conf.d/site.conf
       - ./php/config/www.conf:/usr/local/etc/php-fpm.d/www.conf
       - ./php/log/:/var/log/
