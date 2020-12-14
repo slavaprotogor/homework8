@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/config/:/etc/nginx/conf.d/
+      - ./nginx/config/site.conf:/etc/nginx/conf.d/site.conf
       - ./nginx/log/:/var/log/nginx/
   php:
     image: php:fpm
